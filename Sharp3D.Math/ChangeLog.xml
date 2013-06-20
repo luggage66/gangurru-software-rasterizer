@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type='text/xsl' href='ChangeLog.xslt'?>
+<versions>
+    <version name="1.1.2.2">
+		<add>FromAxisAngle method in quaternion classes.</add>
+		<add>QuaternionToMatrix method in quaternion classes.</add>
+		<add>TransformationD.TransformArray to transform an array of 3D vectors.</add>
+		<add>TransformationF.TransformArray to transform an array of 3D vectors.</add>
+		<add>Matrix4D\Matrix4F Transform method overload to tramsform 3 dimentional vectors.</add>
+		<fix>Matrices ToString() method throws an excpection.</fix>
+		<fix>Matrices [row,column] indexer.</fix>
+		<fix>Vector to FloatArrayList\DoubleArrayList conversion.</fix>
+		<fix>Matrix3D\F error in the constructors with array\ArrayList parameters.</fix>
+		<fix>Matrix3D\F columns constructors recieves 4D vectors instead of 3D vectors.</fix>
+    </version>
+    <version name="1.1.2.2">
+      <change>Sharp3D.Geometry3D.Line renamed to Sharp3D.Geometry3D.Segment</change>
+      <fix>ComplexD.Sqrt and ComplexF.sqrt returns NaN in the real value when given a complex value with imaginary value 0 and negative real value. (Thanks to Philip Jander for reporting on this).</fix>
+    </version>
+    <version name="1.1.2.1" date="01-Oct-2004">
+      <add>RandomUtils class. Currently contain utilities for creating arrays of random Sharp3D.Math.Core value types (vectors, complex etc.)</add>
+      <change>Random namespace framework changed. RandomNumberGenerator base class is replaces by IRandomArrayFiller, IDoubleRandomNumberGenerator and IFloatRandomNumberGenerator.</change>
+      <fix>Triangle class overrides the Equals method so it should also override the quality operator (http://www.gotdotnet.com/team/fxcop/docs/rules/UsageRules/ValueTypesEqualsOverridesRequireOperatorEqualsOverride.html).</fix>
+      <fix>Plane class overrides the Equals method so it should also override the quality operator (http://www.gotdotnet.com/team/fxcop/docs/rules/UsageRules/ValueTypesEqualsOverridesRequireOperatorEqualsOverride.html).</fix>
+      <fix>Polygon's serialization constructor should be protected (http://www.gotdotnet.com/team/fxcop/docs/rules/UsageRules/ISerializableCtor.html).</fix>
+      <fix>No need to reference System.Data from Sharp3D's assemblies.</fix>
+      <fix>Value types equality operator checks for null even though value types cannot be null.</fix>
+    </version>
+    <version name="1.1.2" date="11-Sep-2004">
+        <add>Line-Plane intersection method.</add>
+        <add>Sharp3D.Geometry3D.Line structure.</add>
+        <add>Sharp3D.Analysis namespace for analysis related classes.</add>
+        <add>Sharp3D.Analysis.IIntegrator defining the interface for integrating a functio n over an interval.</add>
+        <add>Sharp3D.Math.Analysis.RombergIntegral - IIntegrator implementation using romberg integration.</add>
+        <add>Sharp3D.Math.Analysis.SimpsonIntegral - IIntegrator implementation using simpson integration</add>
+        <add>DoubleUnaryFunction - Represents a function that takes a double-precision floating point parameter.</add>
+        <add>FloatUnaryFunction - Represents a function that takes a single-precision floating point parameter.</add>
+        <add>Sharp3D.Math.Geometry3D.Polygon class.</add>
+        <add>Sharp3D.Math.Geometry2D.Polygon class.</add>
+        <add>Sharp3D.Math.Geometry3D.Triangle structure.</add>
+        <add>Typed array lists for vector structures.</add>
+        <add>Implementation of the Parse method for the library structures.</add>
+        <add>Sharp3D.Core.ColorF class.</add>
+        <add>Sharp3D.Math.Geometry3D.TransformationD - double-precision floating point transformations.</add>
+        <add>Sharp3D.Math.Geometry3D.TransformationF - single-precision floating point transformations.</add>
+        <add>Ray to Plane intersection method in Sharp3D.Math.Geometry3D.IntersectionMethods.</add>
+        <add>Ray to Triangle intersection method in Sharp3D.Math.Geometry3D.IntersectionMethods.</add>
+        <add>Intersection between two axis aligned boxes in Sharp3D.Math.Geometry3D.IntersectionMethods.</add>
+        <add>Intersection between two axis aligned boxes in Sharp3D.Math.Geometry3D.IntersectionMethods.</add>
+        <add>Sharp3D.Math.Core.MatrixD - A general NxM matrix of double-precision floating point values.</add>
+        <add>Sharp3D.Math.Core.MatrixF - A general NxM matrix of single-precision floating point values.</add>
+        <fix>XML Serialization problem in the polygon class.</fix>
+        <change>Unit testing code was moved to a separate library (Sharp3D.Math.Tests) so that Sharp3D.Math would no longer depand on dependent on NUnit.Framework.dll.</change>
+    </version>
+</versions>
